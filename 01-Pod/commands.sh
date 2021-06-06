@@ -24,7 +24,7 @@ kubectl apply -f pod2.yaml
 kubectl get pod -o wide
 
 # notice that myapp-pod was re-created
-
+kubectl get pod -w
 kubectl logs myapp-pod
 
 
