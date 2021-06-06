@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: busybox
-  namespace: mylab
+  name: mybox
 spec:
   containers:
-  - name: busybox
+  - name: busybox-container
     image: busybox 
     command:
       - sleep 
