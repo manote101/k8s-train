@@ -12,14 +12,14 @@ kubectl get pod -o wide
 kubectl describe pod mynginx
 
 # create pod with manifest file (Infrastruct as Code)
-kubectl apply -f single-pod.yaml
+kubectl apply -f pod-single.yaml
 
 # check pod IP address
 kubectl get pod -o wide
 
 
 # create second pod with CLI 
-kubectl apply -f pod2.yaml
+kubectl apply -f pod-exam.yaml
 
 # check pod IP address
 kubectl get pod -o wide
