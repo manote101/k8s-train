@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homepage-file
+data:
+  index.html: |
+    <!DOCTYPE html> 
+    <html> 
+    <head><title>My Home Page!</title></head>
+    <body>
+    <h1>Welcome to mh Home Page!</h1>
+    <p><em>Thank you for your visting.</em></p>
+    </body>
+    </html>

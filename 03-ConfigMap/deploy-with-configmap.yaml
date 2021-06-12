@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-cf
+  labels:
+    app: myweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myweb
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+          - containerPort: 80
+        volumeMounts:
+          - name: homepage-config 
+            mountPath: /usr/share/nginx/html
+          - name: mysecret-config 
+            mountPath: /usr/share/nginx/html/secret
+      volumes:
+        - name: homepage-config
+          configMap: 
+            name: homepage-file
+        - name: mysecret-config
+          secret: 
+            secretName: mysecret-file
