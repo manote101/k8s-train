@@ -3,7 +3,8 @@
 
 kubectl apply -f myweb-deploy.yaml
 kubectl apply -f myweb-service.yaml
-kubectl get deploy,svc myweb
+kubectl apply -f jumpbox.yaml
+kubectl get deploy,svc 
 
 # see pod
 kubectl get pod
@@ -15,5 +16,5 @@ kubectl logs <pod-name-1> -f      # run on terminal #1
 kubectl logs <pod-name-2> -f      # run on terminal #2
 kubectl logs <pod-name-3> -f      # run on terminal #3
 
-# on main terminal, run curl 3-4 time and see log status
-curl <ip-address-of-service>
+# go back to main terminal, use jumpbox to curl to connect to ip of Service
+kubectl exec jumpbox -- curl <ip-address-of-service>
