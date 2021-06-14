@@ -15,3 +15,8 @@ curl http://<node-ip>:30007
 # Discuss
 # How do we know which node is running pods?
 
+
+# Clean up
+kubectl delete -f whoami-multi-pods.yaml
+kubectl delete -f service.yaml
+
