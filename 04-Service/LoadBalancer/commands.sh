@@ -1,20 +1,14 @@
-# use deployment & service to deploy web application
-# this will be called Main terminal
+# create pods & service 
+kubectl apply -f deployment.yaml
+kubectl apply -f service-lb.yaml
 
-kubectl apply -f myweb-deploy.yaml
-kubectl apply -f myweb-service.yaml
-kubectl apply -f jumpbox.yaml
+# see what we just created
 kubectl get deploy,svc 
-
-# see pod
-kubectl get pod
-kubectl get endpoints
 kubectl get ep
 
-# open 3 terminals, each one run command to monitor each pod
-kubectl logs <pod-name-1> -f      # run on terminal #1
-kubectl logs <pod-name-2> -f      # run on terminal #2
-kubectl logs <pod-name-3> -f      # run on terminal #3
+# if you are running in Cloud or having external LB, you will get "EXTERNAL-IP"
 
-# go back to main terminal, use jumpbox to curl to connect to ip of Service
-kubectl exec jumpbox -- curl <ip-address-of-service>
+
+# Clean up
+kubectl apply -f deployment.yaml
+kubectl apply -f service-lb.yaml
