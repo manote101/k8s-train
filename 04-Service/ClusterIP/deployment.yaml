@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: echo
+  name: myweb2
   labels:
-    app: echoweb
+    app: web-whoami
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: echoweb
+      app: web-whoami
   template:
     metadata:
       labels:
-        app: echoweb
+        app: web-whoami
     spec:
       containers:
-      - name: myecho
-        image: k8s.gcr.io/echoserver:1.4
+      - name: myweb2
+        image: sixeyed/whoami:21.04
         ports:
-        - containerPort: 8080
+        - containerPort: 80
