@@ -10,5 +10,5 @@ kubectl get ep
 
 
 # Clean up
-kubectl apply -f deployment.yaml
-kubectl apply -f service-lb.yaml
+kubectl delete -f deployment.yaml
+kubectl delete -f service-lb.yaml
