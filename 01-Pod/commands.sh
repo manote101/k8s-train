@@ -9,7 +9,7 @@ kubectl config get-contexts                  # display list of contexts
 # use alias command to substitue 'k' with 'kubectl -n mylab'
 alias k='kubectl -n <your-namespace>'
 
-# example, 'k get pod' = 'kubectl -n mylabe get pod'
+# example, 'k get pod' = 'kubectl -n mylab get pod'
 
 
 # create pod with CLI 
