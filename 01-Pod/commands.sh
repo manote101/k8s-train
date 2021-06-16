@@ -2,9 +2,15 @@
 kubectl config get-contexts                  # display list of contexts
 
 # permanently save the namespace for all subsequent kubectl commands in that context.
-# replace XX with your number
-kubectl create namespace mylabXX    
-kubectl config set-context --current --namespace=mylabXX    
+# kubectl create namespace mylab
+# kubectl config set-context --current --namespace=mylab
+
+# For this lab, we will create objects in each owned namespace.
+# use alias command to substitue 'k' with 'kubectl -n mylab'
+alias k='kubectl -n <your-namespace>'
+
+# example, 'k get pod' = 'kubectl -n mylabe get pod'
+
 
 # create pod with CLI 
 kubectl run mynginx --image=nginx
