@@ -1,3 +1,7 @@
+# first of all, clone sample scripts from Manote's GitHub repo
+git clone https://github.com/manote101/k8s-train.git
+
+
 # k8s version
 kubectl version
 
