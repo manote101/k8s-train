@@ -1,8 +1,11 @@
 # check your current context
 kubectl config get-contexts                  # display list of contexts
 
+# Now, we will create our own namespace for the lab, for example, I create "mylab"
+kubectl create namespace <your-namespace>
+
+
 # permanently save the namespace for all subsequent kubectl commands in that context.
-# kubectl create namespace mylab
 # kubectl config set-context --current --namespace=mylab
 
 # For this lab, we will create objects in each owned namespace.
