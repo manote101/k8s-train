@@ -1,3 +1,4 @@
+# This is the first part of my Kubernetes training
 first of all, clone sample scripts from Manote's GitHub repo
 ```
 git clone https://github.com/manote101/k8s-train.git
