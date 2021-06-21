@@ -13,7 +13,7 @@ kubectl config view
 ```
 
 Display namespaces
-```
+```sh
 kubectl get namespace
 kubectl get ns
 # or you can use
