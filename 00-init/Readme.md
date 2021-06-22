@@ -1,5 +1,5 @@
 # This is the first part of my Kubernetes training
-first of all, clone sample scripts from Manote's GitHub repo
+first of all, clone sample scripts from Manote's GitHub [repo](https://github.com/manote101/k8s-train)
 ```
 git clone https://github.com/manote101/k8s-train.git
 ```
