@@ -22,6 +22,12 @@ kubectl get pod
 kubectl exec <pod-name> -- curl localhost
 kubectl exec <pod-name> -- ls -l /usr/share/nginx/html
 kubectl exec <pod-name> -- cat /usr/share/nginx/html/index.html
+# try change something on config-file.yaml, then re-apply again
+kubectl apply -f config.file.yaml
+# see what you just change
+kubectl exec <pod-name> -- curl localhost
+
+
 
 # see secret.file which we created with ConfigMap
 kubectl exec <pod-name> -- ls /usr/share/nginx/html/secret
