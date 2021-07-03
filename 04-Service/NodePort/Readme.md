@@ -17,8 +17,8 @@ kubectl get pod -o wide
 curl http://<node-name>:30007
 curl http://<node-ip>:30007
 ```
-#### Discuss
-#### How do we know which node is running pods?
+#### Wait..., It is a discussion time
+#### Let say we have multiple Nodes in the cluster. How do we know which Node is running pods?
 
 
 #### Clean up
