@@ -32,3 +32,11 @@ Tada ..
 ```
 kubectl exec test-pd -- cat /cache/test.txt
 ```
+---
+[hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) A hostPath volume mounts a file or directory from the host node's filesystem into your Pod.
+
+```
+kubectl apply -f hostPath-volume.yaml
+kubectl get pod
+```
+if directory is not already exist. Try change "type" from Directory to DirectoryOrCreate.
