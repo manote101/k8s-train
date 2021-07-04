@@ -10,7 +10,8 @@ kubectl apply -f web-deploy.yaml
 kubectl apply -f web-service.yaml
 kubectl apply -f ingress.yaml
 
-kubect get ingress
+kubectl get service
+kubectl get ingress
 kubectl describe ingress myweb-ingress
 ```
 
@@ -19,4 +20,18 @@ Then, suppose that we deploy shopping  web site
 kubectl apply -f shopping-config.yaml
 kubectl apply -f shopping-deploy.yaml
 kubectl apply -f shopping-service.yaml
+
+kubectl get deploy,svc
+kubectl describe ingress myweb-ingress
+```
+Test
+```
+curl hello-world.info
+curl hello-world.info/shopping
+curl hello-world.info/web
+```
+
+### Cleanup
+```
+./stop.sh
 ```
