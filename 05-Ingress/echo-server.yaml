@@ -22,9 +22,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: echo-service
+  name: echo-svc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: echo-app
   ports:
